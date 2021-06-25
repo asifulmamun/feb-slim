@@ -4,14 +4,17 @@
     line-height: .6rem;
 
     .custom-logo-link{
-            max-width: 25rem;
-            max-height: 15rem;
+            max-width: 15.625rem;
+            max-height: 10.938rem;
             display: block;
             margin: 0 auto;
             overflow: hidden;
     }
 }
 
-.site-navigation{
-    
+// menu
+@media (min-width: 768px){
+    .navbar-expand-md .navbar-collapse {
+        justify-content: center;
+    }
 }

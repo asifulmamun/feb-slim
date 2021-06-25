@@ -50,7 +50,7 @@ if ( ! function_exists( 'feb_slim_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'primary_menu' => esc_html__( 'Primary', 'feb-slim' ),
+				'menu_1' => esc_html__( 'Menu-1', 'feb-slim' ),
 			)
 		);
 
@@ -140,9 +140,9 @@ add_action( 'widgets_init', 'feb_slim_widgets_init' );
  * Enqueue scripts and styles.
  */
 function feb_slim_scripts() {
-	wp_enqueue_style( 'feb-slim-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_style_add_data( 'feb-slim-style', 'rtl', 'replace' );
 
+	/* Default JS
+	----------- */
 	wp_enqueue_script( 'feb-slim-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -151,10 +151,14 @@ function feb_slim_scripts() {
 
 	/* Bootstrap
 	---------------*/
-	wp_enqueue_style( 'bootstrap', '//cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css', array(), '5.0.2', 'all' );
-	wp_enqueue_script( 'popper', '//cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js', array('jquery'), '5.0.2', true );
-	wp_enqueue_script( 'bootstrap', '//cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js', array('jquery'), '5.0.2', true );
+	wp_enqueue_style( 'bootstrap', '//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css', array(), '4.3.1', 'all' );
+	wp_enqueue_script( 'popper', '///cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js', array('jquery'), '1.14.7', true );
+	wp_enqueue_script( 'bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', array('jquery'), '4.3.2', true );
 
+	/* Main/Default Css
+	----------------- */
+	wp_enqueue_style( 'feb-slim-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_style_add_data( 'feb-slim-style', 'rtl', 'replace' );
 
 }
 add_action( 'wp_enqueue_scripts', 'feb_slim_scripts' );
@@ -192,3 +196,15 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
+
+/**
+ * Register Custom Navigation Walker
+ */
+function register_navwalker(){
+	require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
+}
+add_action( 'after_setup_theme', 'register_navwalker' );
+
+register_nav_menus( array(
+    'primary' => __( 'Primary Menu', 'feb-slim' ),
+) );
