@@ -530,4 +530,19 @@ p.no-comments {
   background-color: #800080;
 }
 
+.woocommerce-pagination ul {
+  display: flex;
+  justify-content: center;
+}
+.woocommerce-pagination ul li {
+  list-style-type: none;
+  background-color: #21759b;
+  color: #f1f1f1;
+  padding: 3px 9px;
+  margin: 0 5px;
+}
+.woocommerce-pagination ul li a {
+  color: #fff;
+}
+
 /*# sourceMappingURL=woocommerce.css.map */
