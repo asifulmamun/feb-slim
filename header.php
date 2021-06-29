@@ -45,7 +45,7 @@
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 
-<nav class="navbar navbar-expand-md navbar-light bg-light text-center" role="navigation">
+<nav class="navbar navbar-expand-md navbar-light text-center" role="navigation">
   <div class="container-fluid">
   
     <!-- Brand and toggle get grouped for better mobile display -->

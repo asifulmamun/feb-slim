@@ -20,7 +20,7 @@ $woocommerce__color-info: #3d9cd2;
 /**
  * Products
  */
-@import "plugins/woocommerce/products";
+// @import "plugins/woocommerce/products";
 
 /**
  * Single product
@@ -41,3 +41,8 @@ $woocommerce__color-info: #3d9cd2;
  * WooCommerce widgets
  */
 @import "plugins/woocommerce/widgets";
+
+
+/* WooCommerce Customizer
+---------------*/
+@import "./woocommerce_customizer";

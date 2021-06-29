@@ -9,3 +9,30 @@
 @mixin column-width($numberColumns: 3) {
 	width: map-get($columns, $numberColumns) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
 }
+
+// transaction
+@mixin transition($time, $type){
+    transition: $time $type;
+    -webkit-transition: $time $type;
+    -moz-transition: $time $type;
+    -ms-transition: $time $type;
+    -o-transition: $time $type;
+}
+
+// opacity
+@mixin opacity($amount) {
+	opacity: $amount;
+	-webkit-opacity: $amount;
+    -moz-opacity: $amount;
+    -ms-opacity: $amount;
+    -o-opacity: $amount;
+}
+
+// transform scale
+@mixin transform_scale($scale){
+    transform: scale($scale);
+    -webkit-transform: scale($scale);
+    -moz-transform: scale($scale);
+    -ms-transform: scale($scale);
+    -o-transform: scale($scale);
+}

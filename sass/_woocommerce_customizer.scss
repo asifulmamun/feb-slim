@@ -1,0 +1,123 @@
+// Product Loop
+.fp_products{
+    li{
+        list-style: none;
+        width: 100%;
+        padding: 1.875rem 0;
+
+        .fp_container{
+            position: relative;
+            width: 100%;
+            max-height: 43.75rem;
+            padding: .9rem 0;
+            overflow: hidden;
+
+            .onsale{
+                position: absolute;
+                top: 0px;
+                right: 5px;
+                z-index: 10;
+                background-color: $color__link-visited;
+                padding: .188rem .625rem;
+                color: $color__background-body;
+                border-radius: .25rem;
+            }
+
+            .fp_thumb{
+                position: relative;
+                width: 95%;
+                max-height: 18.75rem;
+                margin: .625rem auto;
+                overflow: hidden;
+                
+                // // overlay
+                // &:hover{
+                //     &::after{
+                //         content: "";
+                //         position: absolute;
+                //         top: 0;
+                //         left: 0;
+                //         width: 100%;
+                //         height: 100%;
+                //         background-color: rgb(0 0 0 / 26%);
+                //         z-index: 9;
+                //     }
+                // }
+
+                img{
+                    @include transition(5s, ease);
+                    width: 90%;
+                    display: block;
+                    margin: 0 auto;
+
+                    &:hover{
+                        @include transform_scale(1.5);
+                        @include opacity(.5);
+                        
+                    } 
+                }
+            
+            }
+
+            // product details
+            .details{
+                width: 80%;
+                margin: .313rem auto;
+
+                a{
+                    color: $color__text-main;
+                    &:hover{
+                        text-decoration: none;
+                        color: $color__link-hover;
+                    }
+
+                    h2{
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+
+                    .price{
+                        display: block;
+                    }
+
+                    h2{
+                        font-size: .938rem;
+                    }
+                }
+
+                .add_to_cart_button,.added_to_cart{
+                    display: block;
+                    color: $color__background-body;
+                    width: 80%;
+                    margin: .313rem auto 0 auto;
+                    text-align: center;
+                    padding: .3rem .15rem;
+                    border-radius: .25rem;
+                    @include transition(.8s, ease);
+
+                    &:hover{
+                        color: $color__background-body;
+                    }
+                }
+
+                .add_to_cart_button{
+                    background-color: $color__text-screen;
+
+                    &:hover{
+                        background-color: $color__link-visited;
+
+                    }
+                }
+                .added_to_cart{
+                    background-color: $color__text-input;
+
+                    &:hover{
+                        background-color: $color__link-visited;
+                    }
+                }
+
+            }
+        }
+    }
+}
