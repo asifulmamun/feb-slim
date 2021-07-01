@@ -3,6 +3,9 @@ Theme Name: Feb Slim
 
 WooCommerce styles override
 */
+/* 
+    ------ Center Absolute under relative
+*/
 /**
  * Shop tables
  */
@@ -458,6 +461,12 @@ p.no-comments {
   margin: 0.625rem auto;
   overflow: hidden;
 }
+.fp_products li .fp_container .fp_thumb:hover .button, .fp_products li .fp_container .fp_thumb:hover .added_to_cart {
+  display: block;
+}
+.fp_products li .fp_container .fp_thumb:hover .added {
+  display: none !important;
+}
 .fp_products li .fp_container .fp_thumb img {
   transition: 5s ease;
   -webkit-transition: 5s ease;
@@ -480,28 +489,17 @@ p.no-comments {
   -ms-opacity: 0.5;
   -o-opacity: 0.5;
 }
-.fp_products li .fp_container .details {
-  width: 80%;
-  margin: 0.313rem auto;
-}
-.fp_products li .fp_container .details a {
-  color: #404040;
-}
-.fp_products li .fp_container .details a:hover {
-  text-decoration: none;
-  color: #191970;
-}
-.fp_products li .fp_container .details a h2:hover {
-  text-decoration: underline;
-}
-.fp_products li .fp_container .details a .price {
-  display: block;
-}
-.fp_products li .fp_container .details a h2 {
-  font-size: 0.938rem;
-}
-.fp_products li .fp_container .details .add_to_cart_button, .fp_products li .fp_container .details .added_to_cart {
-  display: block;
+.fp_products li .fp_container .fp_thumb .button, .fp_products li .fp_container .fp_thumb .added_to_cart {
+  display: none;
+  position: absolute;
+  left: 50%;
+  bottom: 1%;
+  transform: translate(-50%, -1%);
+  -webkit-transform: translate(-50%, -1%);
+  -moz-transform: translate(-50%, -1%);
+  -ms-transform: translate(-50%, -1%);
+  -o-transform: translate(-50%, -1%);
+  z-index: 10;
   color: #fff;
   width: 80%;
   margin: 0.313rem auto 0 auto;
@@ -514,20 +512,40 @@ p.no-comments {
   -ms-transition: 0.8s ease;
   -o-transition: 0.8s ease;
 }
-.fp_products li .fp_container .details .add_to_cart_button:hover, .fp_products li .fp_container .details .added_to_cart:hover {
+.fp_products li .fp_container .fp_thumb .button:hover, .fp_products li .fp_container .fp_thumb .added_to_cart:hover {
   color: #fff;
 }
-.fp_products li .fp_container .details .add_to_cart_button {
+.fp_products li .fp_container .fp_thumb .add_to_cart_button {
   background-color: #21759b;
 }
-.fp_products li .fp_container .details .add_to_cart_button:hover {
+.fp_products li .fp_container .fp_thumb .add_to_cart_button:hover {
   background-color: #800080;
 }
-.fp_products li .fp_container .details .added_to_cart {
+.fp_products li .fp_container .fp_thumb .added_to_cart {
   background-color: #666;
 }
-.fp_products li .fp_container .details .added_to_cart:hover {
+.fp_products li .fp_container .fp_thumb .added_to_cart:hover {
   background-color: #800080;
+}
+.fp_products li .fp_container .details {
+  width: 80%;
+  margin: 0.313rem auto;
+}
+.fp_products li .fp_container .details h2 {
+  font-size: 0.938rem;
+}
+.fp_products li .fp_container .details h2:hover {
+  text-decoration: underline;
+}
+.fp_products li .fp_container .details h2 a {
+  color: #404040;
+}
+.fp_products li .fp_container .details h2 a:hover {
+  text-decoration: none;
+  color: #191970;
+}
+.fp_products li .fp_container .details .price {
+  display: block;
 }
 
 .woocommerce-pagination ul {

@@ -30,6 +30,21 @@
                 margin: .625rem auto;
                 overflow: hidden;
                 
+
+                &:hover{
+                    
+                    // after hover show add to cart button
+                    .button,.added_to_cart{
+                        display: block;
+                       
+                    }
+
+                    // after clicked add to cart button - hide add to cart button (after clicked add to cart button woo commerce automatic include .added class with add to cart button, I just hide the .added class which is already maintain by woo commerce)
+                    .added{
+                        display: none !important;
+                    }
+                }
+
                 // // overlay
                 // &:hover{
                 //     &::after{
@@ -54,40 +69,16 @@
                         @include transform_scale(1.5);
                         @include opacity(.5);
                         
-                    } 
-                }
-            
-            }
-
-            // product details
-            .details{
-                width: 80%;
-                margin: .313rem auto;
-
-                a{
-                    color: $color__text-main;
-                    &:hover{
-                        text-decoration: none;
-                        color: $color__link-hover;
-                    }
-
-                    h2{
-                        &:hover{
-                            text-decoration: underline;
-                        }
-                    }
-
-                    .price{
-                        display: block;
-                    }
-
-                    h2{
-                        font-size: .938rem;
                     }
                 }
 
-                .add_to_cart_button,.added_to_cart{
-                    display: block;
+                .button,.added_to_cart{
+                    display: none;
+                    position: absolute;
+                    left: 50%;
+                    bottom: 1%;
+                    @include cross_browser_transform_translate(-50%, -1%);
+                    z-index: 10;
                     color: $color__background-body;
                     width: 80%;
                     margin: .313rem auto 0 auto;
@@ -116,6 +107,64 @@
                         background-color: $color__link-visited;
                     }
                 }
+            
+            }
+
+            // product details
+            .details{
+                width: 80%;
+                margin: .313rem auto;
+
+                h2{
+                    font-size: .938rem;
+
+                    &:hover{
+                        text-decoration: underline;
+                    }
+
+                    a{
+                        color: $color__text-main;
+                        &:hover{
+                            text-decoration: none;
+                            color: $color__link-hover;
+                        }
+                    }
+                }
+
+                .price{
+                    display: block;
+                }
+
+                // .add_to_cart_button,.added_to_cart{
+                //     display: block;
+                //     color: $color__background-body;
+                //     width: 80%;
+                //     margin: .313rem auto 0 auto;
+                //     text-align: center;
+                //     padding: .3rem .15rem;
+                //     border-radius: .25rem;
+                //     @include transition(.8s, ease);
+
+                //     &:hover{
+                //         color: $color__background-body;
+                //     }
+                // }
+
+                // .add_to_cart_button{
+                //     background-color: $color__text-screen;
+
+                //     &:hover{
+                //         background-color: $color__link-visited;
+
+                //     }
+                // }
+                // .added_to_cart{
+                //     background-color: $color__text-input;
+
+                //     &:hover{
+                //         background-color: $color__link-visited;
+                //     }
+                // }
 
             }
         }
@@ -127,6 +176,7 @@
     ul{
         display: flex;
         justify-content: center;
+        
         li{
             list-style-type: none;
             background-color: $color__text-screen;

@@ -45,14 +45,14 @@ if ( ! function_exists( 'feb_slim_setup' ) ) :
 		 *
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
-		add_theme_support( 'post-thumbnails' );
+		// add_theme_support( 'post-thumbnails' );
 
-		// This theme uses wp_nav_menu() in one location.
-		register_nav_menus(
-			array(
-				'menu_1' => esc_html__( 'Menu-1', 'feb-slim' ),
-			)
-		);
+		// // This theme uses wp_nav_menu() in one location.
+		// register_nav_menus(
+		// 	array(
+		// 		'menu_1' => esc_html__( 'Menu-1', 'feb-slim' ),
+		// 	)
+		// );
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
@@ -136,6 +136,14 @@ function feb_slim_widgets_init() {
 }
 add_action( 'widgets_init', 'feb_slim_widgets_init' );
 
+// // Footer Widget-1
+// function feb_slim_footer_widget_1() {
+
+// 	register_widget('footer_1');
+// }
+// add_action( 'widgets_init', 'feb_slim_footer_widget_1' );
+
+
 /**
  * Enqueue scripts and styles.
  */
@@ -205,6 +213,7 @@ function register_navwalker(){
 }
 add_action( 'after_setup_theme', 'register_navwalker' );
 
+// Primary menu Register
 register_nav_menus( array(
     'primary' => __( 'Primary Menu', 'feb-slim' ),
 ) );

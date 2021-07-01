@@ -36,3 +36,21 @@
     -ms-transform: scale($scale);
     -o-transform: scale($scale);
 }
+
+/* 
+    ------ Center Absolute under relative
+*/
+@mixin cross_browser_transform_translate($top, $left){
+    transform: translate($top, $left);
+    -webkit-transform: translate($top, $left);
+    -moz-transform: translate($top, $left);
+    -ms-transform: translate($top, $left);
+    -o-transform: translate($top, $left);
+}
+// extended mixin to center absolute
+%center_absolute{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    @include cross_browser_transform_translate(-50%, -50%);
+}
