@@ -1,0 +1,136 @@
+// cart form
+form.cart{
+
+    table.variations{
+
+        tbody{
+
+            td.value{
+
+                select{
+                    border: none;
+                    border-radius: 3px;
+                    padding: 0.4375rem 0.75rem;
+                    color: $color__text-screen;
+                }
+            }
+        }
+
+        // a/button - clear or reset_variations
+        a.reset_variations{
+            color: $color__background-body;
+            background-color: $color__link-visited;
+            margin: 0 0 0 1rem;
+            padding: .4375rem .75rem;
+            border-radius: 0.1875rem;
+            @include transition(0.3s, ease);
+
+
+            &:hover{
+                background-color: $color__text-screen;
+            }
+        }
+    }
+
+    div.single_variation_wrap{
+
+        .variations_button{
+
+            // quantity selection
+            div.quantity{
+                input[type=number].qty{
+                    width: 30%;
+                }
+            }
+
+            // add to cart button
+            button[type=submit].button{
+                background-color: $color__text-screen;
+                color: $color__background-body;
+                @include transition(0.3s, ease);
+                border: none;
+                border-radius: 0.1875rem;
+                margin-top: .5rem;
+                margin-bottom: .5rem;
+                padding: 1rem 2rem;
+
+                &:hover{
+                    background-color: $color__link-visited;
+                }
+            }
+        }
+    }
+}
+
+// description main & tab
+.described{
+    margin-top: 3.125rem;
+    
+    .woocommerce-tabs{
+
+        ul.tabs{
+            display: flex;
+            margin: 0;
+            padding: 0;
+
+            li.active{
+                a{
+                    background-color: $color__link-visited;
+                }
+            }
+
+            li{
+                margin: 0 .1875rem;
+
+                a{
+                    background-color: $color__text-screen;
+                    padding: .75rem 1.125rem;
+                    color: $color__background-body;
+                    @include transition(0.5s, ease);
+                    text-decoration: none;
+
+                    &:hover{
+                        background-color: $color__link-visited;
+                    }
+                }
+            }
+        }
+    }
+
+
+    // related products
+    section.related.products{
+        margin-top: 3.125rem;
+        
+        >h2{
+            color: $color__text-screen;
+            text-transform: uppercase;
+            border-bottom: .09375rem dashed;
+        }
+    }
+}
+
+// woo notice
+.woocommerce-notices-wrapper{
+
+    .woocommerce-message{
+
+        background-color: red;
+        color: $color__background-body;
+
+        a.button{
+            background-color: $color__text-screen;
+            color: $color__background-body;
+            @include transition(0.3s, ease);
+            border: none;
+            border-radius: 0.1875rem;
+            margin-top: .5rem;
+            margin-bottom: .5rem;
+            padding: 1rem 2rem;
+
+            &:hover{
+                background-color: $color__link-visited;
+            }
+        }
+    }
+}

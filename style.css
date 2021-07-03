@@ -443,7 +443,7 @@ var {
 
 abbr,
 acronym {
-  border-bottom: 1px dotted #666;
+  border-bottom: 1px dotted #ebebeb;
   cursor: help;
 }
 
@@ -932,6 +932,10 @@ textarea {
   .navbar-expand-md .navbar-collapse {
     justify-content: center;
   }
+}
+nav.navbar-expand-md {
+  border-bottom: 0.0625rem solid #ebebeb;
+  padding-bottom: 3.125rem;
 }
 
 /*# sourceMappingURL=style.css.map */

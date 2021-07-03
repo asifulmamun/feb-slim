@@ -18,3 +18,8 @@
         justify-content: center;
     }
 }
+
+nav.navbar-expand-md{
+    border-bottom: .0625rem solid $color__border-abbr;
+    padding-bottom: 3.125rem;
+}

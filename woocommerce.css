@@ -274,18 +274,11 @@ p.stars.selected a:not(.active)::before {
  */
 .woocommerce-tabs ul.tabs {
   list-style: none;
-  margin: 0;
-  padding: 0;
   text-align: left;
 }
 .woocommerce-tabs ul.tabs li {
   display: block;
-  margin: 0;
   position: relative;
-}
-.woocommerce-tabs ul.tabs li a {
-  padding: 1em 0;
-  display: block;
 }
 .woocommerce-tabs .panel h2:first-of-type {
   margin-bottom: 1em;
@@ -432,6 +425,28 @@ p.no-comments {
 
 /* WooCommerce Customizer
 ---------------*/
+header.woocommerce-products-header h1.woocommerce-products-header__title {
+  text-align: center;
+  padding: 1.5625rem 0;
+}
+
+.product_short_bar {
+  border-top: 0.0625rem solid #ebebeb;
+  border-bottom: 0.0625rem solid #ebebeb;
+  padding: 0.625rem 0;
+  margin-bottom: 3.125rem;
+}
+.product_short_bar form.woocommerce-ordering select.orderby {
+  border: none;
+  background-color: transparent;
+  font-size: 0.9375rem;
+}
+.product_short_bar p.woocommerce-result-count {
+  padding: 0;
+  margin: 0;
+  font-size: 0.9375rem;
+}
+
 .fp_products li {
   list-style: none;
   width: 100%;
@@ -556,11 +571,124 @@ p.no-comments {
   list-style-type: none;
   background-color: #21759b;
   color: #f1f1f1;
-  padding: 3px 9px;
   margin: 0 5px;
 }
 .woocommerce-pagination ul li a {
+  padding: 3px 9px;
   color: #fff;
+}
+.woocommerce-pagination ul li a:hover {
+  background-color: #800080;
+  transition: 0.7s ease;
+  -webkit-transition: 0.7s ease;
+  -moz-transition: 0.7s ease;
+  -ms-transition: 0.7s ease;
+  -o-transition: 0.7s ease;
+}
+.woocommerce-pagination ul li .current {
+  padding: 3px 9px;
+  background-color: #800080;
+}
+
+form.cart table.variations tbody td.value select {
+  border: none;
+  border-radius: 3px;
+  padding: 0.4375rem 0.75rem;
+  color: #21759b;
+}
+form.cart table.variations a.reset_variations {
+  color: #fff;
+  background-color: #800080;
+  margin: 0 0 0 1rem;
+  padding: 0.4375rem 0.75rem;
+  border-radius: 0.1875rem;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+}
+form.cart table.variations a.reset_variations:hover {
+  background-color: #21759b;
+}
+form.cart div.single_variation_wrap .variations_button div.quantity input[type=number].qty {
+  width: 30%;
+}
+form.cart div.single_variation_wrap .variations_button button[type=submit].button {
+  background-color: #21759b;
+  color: #fff;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  border: none;
+  border-radius: 0.1875rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 1rem 2rem;
+}
+form.cart div.single_variation_wrap .variations_button button[type=submit].button:hover {
+  background-color: #800080;
+}
+
+.described {
+  margin-top: 3.125rem;
+}
+.described .woocommerce-tabs ul.tabs {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.described .woocommerce-tabs ul.tabs li.active a {
+  background-color: #800080;
+}
+.described .woocommerce-tabs ul.tabs li {
+  margin: 0 0.1875rem;
+}
+.described .woocommerce-tabs ul.tabs li a {
+  background-color: #21759b;
+  padding: 0.75rem 1.125rem;
+  color: #fff;
+  transition: 0.5s ease;
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -ms-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  text-decoration: none;
+}
+.described .woocommerce-tabs ul.tabs li a:hover {
+  background-color: #800080;
+}
+.described section.related.products {
+  margin-top: 3.125rem;
+}
+.described section.related.products > h2 {
+  color: #21759b;
+  text-transform: uppercase;
+  border-bottom: 0.09375rem dashed;
+}
+
+.woocommerce-notices-wrapper .woocommerce-message {
+  background-color: red;
+  color: #fff;
+}
+.woocommerce-notices-wrapper .woocommerce-message a.button {
+  background-color: #21759b;
+  color: #fff;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  border: none;
+  border-radius: 0.1875rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 1rem 2rem;
+}
+.woocommerce-notices-wrapper .woocommerce-message a.button:hover {
+  background-color: #800080;
 }
 
 /*# sourceMappingURL=woocommerce.css.map */
