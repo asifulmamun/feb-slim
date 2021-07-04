@@ -938,4 +938,8 @@ nav.navbar-expand-md {
   padding-bottom: 3.125rem;
 }
 
+aside.widget-area ul li {
+  list-style: none;
+}
+
 /*# sourceMappingURL=style.css.map */
