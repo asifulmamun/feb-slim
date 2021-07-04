@@ -27,7 +27,7 @@ if (empty($product) || !$product->is_visible()) {
 ?>
 
 
-<div class="col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3">
+<div class="col-sm-6 col-12 col-md-3 col-lg-3 col-xl-3">
 	<li <?php wc_product_class('', $product);?>>
 
 		<div class="fp_container">
