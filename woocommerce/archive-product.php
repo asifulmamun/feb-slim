@@ -66,11 +66,11 @@ if (woocommerce_product_loop()) {
 		<div class="container">
 			<div class="row">
 
-				<div class="col-sm-12 col-6 col-md-6 col-lg-6 col-xl-6">
+				<div class="col-sm-12 col-12 col-md-6 col-lg-6 col-xl-6">
 					<?php woocommerce_catalog_ordering(); // order/short by ?>
 				</div>
 
-				<div class="col-sm-12 col-6 col-md-6 col-lg-6 col-xl-6 text-right">
+				<div class="col-sm-12 col-12 col-md-6 col-lg-6 col-xl-6 text-right">
 					<?php woocommerce_result_count(); // count of restults ?>
 				</div>
 			</div>

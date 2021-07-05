@@ -14,7 +14,7 @@ get_header();
 <div class="container">
 	<div class="row">
 
-		<div class="col-sm-12 col-8 col-md-8 col-lg-8 col-xl-8">
+		<div class="col-sm-12 col-12 col-md-8 col-lg-8 col-xl-8">
 			<main id="primary" class="site-main">
 				<?php
 				while (have_posts()) :
@@ -39,7 +39,7 @@ get_header();
 			</main><!-- #main -->
 		</div>
 
-		<div class="col-sm-12 col-4 col-md-4 col-lg-4 col-xl-4">
+		<div class="col-sm-12 col-12 col-md-4 col-lg-4 col-xl-4">
 			<?php get_sidebar(); ?>
 		</div>
 
