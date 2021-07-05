@@ -678,10 +678,31 @@ form.cart div.single_variation_wrap .variations_button div.quantity input[type=n
   background-color: #800080;
 }
 
+form.woocommerce-cart-form table.cart th, form.woocommerce-cart-form table.cart td {
+  text-align: center;
+  padding-top: 0.438rem;
+  padding-bottom: 0.438rem;
+}
+form.woocommerce-cart-form table.cart th.product-name, form.woocommerce-cart-form table.cart td.product-name {
+  text-align: left;
+}
+form.woocommerce-cart-form table.cart th.product-price, form.woocommerce-cart-form table.cart td.product-price, form.woocommerce-cart-form table.cart th.product-subtotal, form.woocommerce-cart-form table.cart td.product-subtotal {
+  text-align: right;
+}
+form.woocommerce-cart-form table.cart th:first-child, form.woocommerce-cart-form table.cart td:first-child {
+  padding-left: 0.5rem;
+}
+form.woocommerce-cart-form table.cart th:last-child, form.woocommerce-cart-form table.cart td:last-child {
+  padding-right: 0.5rem;
+}
+form.woocommerce-cart-form table.cart td.product-quantity .quantity input[type=number] {
+  max-width: 10rem;
+}
+
 .coupon {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
 }
 .coupon label {
   display: block;
@@ -699,7 +720,7 @@ form.cart div.single_variation_wrap .variations_button div.quantity input[type=n
   margin: 2rem auto;
   text-align: center;
   display: block;
-  min-width: 50%;
+  min-width: 25%;
 }
 
 .cart-collaterals {
@@ -717,6 +738,9 @@ form.cart div.single_variation_wrap .variations_button div.quantity input[type=n
 .cart-collaterals .cart_totals table.shop_table tbody tr th, .cart-collaterals .cart_totals table.shop_table tbody tr td {
   border: 0.063rem dashed;
   padding: 0.438rem 0.625rem;
+}
+.cart-collaterals .cart_totals .wc-proceed-to-checkout {
+  margin-top: 3.125rem;
 }
 
 /*# sourceMappingURL=woocommerce.css.map */

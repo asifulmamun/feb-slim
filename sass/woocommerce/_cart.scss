@@ -1,8 +1,47 @@
+// woo commerce cart form
+form.woocommerce-cart-form{
+    table.cart{  
+
+            th,td{
+                text-align: center;
+                padding-top: .438rem;
+                padding-bottom: .438rem;
+                // background-color: $color__background-pre;
+            }
+
+            th.product-name,td.product-name{
+                text-align: left;
+            }
+
+            th.product-price,td.product-price,th.product-subtotal,td.product-subtotal{
+                text-align: right;
+            }
+
+            th:first-child,td:first-child{
+                padding-left: .5rem;
+            }
+
+            th:last-child,td:last-child{
+                padding-right: .5rem;
+            }
+
+            td.product-quantity{
+                .quantity{
+                    input[type=number]{
+                        max-width: 10rem;
+                    }
+                }
+            }
+         
+    }
+}
+
+
 // coupon
 .coupon{
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
 
     label{
         display: block;
@@ -29,7 +68,7 @@
     margin: 2rem auto;
     text-align: center;
     display: block;
-    min-width: 50%;
+    min-width: 25%;
 }
 
 // Cart Calculation and Process to checkout
@@ -63,6 +102,7 @@
         }
 
         .wc-proceed-to-checkout{
+            margin-top: 3.125rem;
 
             a.checkout-button{
                 @extend %button_simple;
