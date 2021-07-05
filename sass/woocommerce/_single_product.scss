@@ -18,17 +18,9 @@ form.cart{
 
         // a/button - clear or reset_variations
         a.reset_variations{
-            color: $color__background-body;
-            background-color: $color__link-visited;
+            @extend %button_reverse;
             margin: 0 0 0 1rem;
             padding: .4375rem .75rem;
-            border-radius: 0.1875rem;
-            @include transition(0.3s, ease);
-
-
-            &:hover{
-                background-color: $color__text-screen;
-            }
         }
     }
 
@@ -45,18 +37,7 @@ form.cart{
 
             // add to cart button
             button[type=submit].button{
-                background-color: $color__text-screen;
-                color: $color__background-body;
-                @include transition(0.3s, ease);
-                border: none;
-                border-radius: 0.1875rem;
-                margin-top: .5rem;
-                margin-bottom: .5rem;
-                padding: 1rem 2rem;
-
-                &:hover{
-                    background-color: $color__link-visited;
-                }
+                @extend %button_simple;
             }
         }
     }
@@ -83,15 +64,9 @@ form.cart{
                 margin: 0 .1875rem;
 
                 a{
-                    background-color: $color__text-screen;
+                    @extend %button_simple;
                     padding: .75rem 1.125rem;
-                    color: $color__background-body;
-                    @include transition(0.5s, ease);
                     text-decoration: none;
-
-                    &:hover{
-                        background-color: $color__link-visited;
-                    }
                 }
             }
         }

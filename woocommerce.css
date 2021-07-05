@@ -6,6 +6,42 @@ WooCommerce styles override
 /* 
     ------ Center Absolute under relative
 */
+.cart-collaterals .cart_totals .wc-proceed-to-checkout a.checkout-button, .update_cart, .described .woocommerce-tabs ul.tabs li a, form.cart div.single_variation_wrap .variations_button button[type=submit].button, .fp_products li .fp_container .fp_thumb .button, .fp_products li .fp_container .fp_thumb .added_to_cart {
+  background-color: #21759b;
+  color: #fff;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  border: none;
+  border-radius: 0.1875rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 1rem 2rem;
+}
+.cart-collaterals .cart_totals .wc-proceed-to-checkout a.checkout-button:hover, .update_cart:hover, .described .woocommerce-tabs ul.tabs li a:hover, form.cart div.single_variation_wrap .variations_button button[type=submit].button:hover, .fp_products li .fp_container .fp_thumb .button:hover, .fp_products li .fp_container .fp_thumb .added_to_cart:hover {
+  background-color: #800080;
+}
+
+.coupon button[type=submit].button, form.cart table.variations a.reset_variations {
+  background-color: #800080;
+  color: #fff;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  border: none;
+  border-radius: 0.1875rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 1rem 2rem;
+}
+.coupon button[type=submit].button:hover, form.cart table.variations a.reset_variations:hover {
+  background-color: #21759b;
+}
+
 /**
  * Shop tables
  */
@@ -515,20 +551,10 @@ header.woocommerce-products-header h1.woocommerce-products-header__title {
   -ms-transform: translate(-50%, -1%);
   -o-transform: translate(-50%, -1%);
   z-index: 10;
-  color: #fff;
   width: 80%;
-  margin: 0.313rem auto 0 auto;
   text-align: center;
+  margin: 0.313rem auto 0 auto;
   padding: 0.3rem 0.15rem;
-  border-radius: 0.25rem;
-  transition: 0.8s ease;
-  -webkit-transition: 0.8s ease;
-  -moz-transition: 0.8s ease;
-  -ms-transition: 0.8s ease;
-  -o-transition: 0.8s ease;
-}
-.fp_products li .fp_container .fp_thumb .button:hover, .fp_products li .fp_container .fp_thumb .added_to_cart:hover {
-  color: #fff;
 }
 .fp_products li .fp_container .fp_thumb .add_to_cart_button {
   background-color: #21759b;
@@ -597,41 +623,12 @@ form.cart table.variations tbody td.value select {
   color: #21759b;
 }
 form.cart table.variations a.reset_variations {
-  color: #fff;
-  background-color: #800080;
   margin: 0 0 0 1rem;
   padding: 0.4375rem 0.75rem;
-  border-radius: 0.1875rem;
-  transition: 0.3s ease;
-  -webkit-transition: 0.3s ease;
-  -moz-transition: 0.3s ease;
-  -ms-transition: 0.3s ease;
-  -o-transition: 0.3s ease;
-}
-form.cart table.variations a.reset_variations:hover {
-  background-color: #21759b;
 }
 form.cart div.single_variation_wrap .variations_button div.quantity input[type=number].qty {
   width: 30%;
 }
-form.cart div.single_variation_wrap .variations_button button[type=submit].button {
-  background-color: #21759b;
-  color: #fff;
-  transition: 0.3s ease;
-  -webkit-transition: 0.3s ease;
-  -moz-transition: 0.3s ease;
-  -ms-transition: 0.3s ease;
-  -o-transition: 0.3s ease;
-  border: none;
-  border-radius: 0.1875rem;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  padding: 1rem 2rem;
-}
-form.cart div.single_variation_wrap .variations_button button[type=submit].button:hover {
-  background-color: #800080;
-}
-
 .described {
   margin-top: 3.125rem;
 }
@@ -647,18 +644,8 @@ form.cart div.single_variation_wrap .variations_button button[type=submit].butto
   margin: 0 0.1875rem;
 }
 .described .woocommerce-tabs ul.tabs li a {
-  background-color: #21759b;
   padding: 0.75rem 1.125rem;
-  color: #fff;
-  transition: 0.5s ease;
-  -webkit-transition: 0.5s ease;
-  -moz-transition: 0.5s ease;
-  -ms-transition: 0.5s ease;
-  -o-transition: 0.5s ease;
   text-decoration: none;
-}
-.described .woocommerce-tabs ul.tabs li a:hover {
-  background-color: #800080;
 }
 .described section.related.products {
   margin-top: 3.125rem;
@@ -689,6 +676,47 @@ form.cart div.single_variation_wrap .variations_button button[type=submit].butto
 }
 .woocommerce-notices-wrapper .woocommerce-message a.button:hover {
   background-color: #800080;
+}
+
+.coupon {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.coupon label {
+  display: block;
+  font-size: large;
+  font-weight: bold;
+  color: #800080;
+}
+.coupon input[type=text] {
+  display: block;
+  padding: 0.625rem 1rem;
+  border-color: #800080;
+  color: #800080;
+}
+.update_cart {
+  margin: 2rem auto;
+  text-align: center;
+  display: block;
+  min-width: 50%;
+}
+
+.cart-collaterals {
+  text-align: center;
+  padding-top: 2rem;
+}
+.cart-collaterals .cart_totals h2 {
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #e6e6e6;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.cart-collaterals .cart_totals table.shop_table tbody tr th, .cart-collaterals .cart_totals table.shop_table tbody tr td {
+  border: 0.063rem dashed;
+  padding: 0.438rem 0.625rem;
 }
 
 /*# sourceMappingURL=woocommerce.css.map */

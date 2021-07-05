@@ -1,0 +1,72 @@
+// coupon
+.coupon{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    label{
+        display: block;
+        font-size: large;
+        font-weight: bold;
+        color: $color__link-visited;
+    }
+
+    input[type=text]{
+        display: block;
+        padding: .625rem 1rem;
+        border-color: $color__link-visited;
+        color: $color__link-visited;
+    }
+
+    button[type=submit].button{
+        @extend %button_reverse;
+    }
+}
+
+// update cart
+.update_cart{
+    @extend %button_simple;
+    margin: 2rem auto;
+    text-align: center;
+    display: block;
+    min-width: 50%;
+}
+
+// Cart Calculation and Process to checkout
+.cart-collaterals{
+    text-align: center;
+    padding-top: 2rem;
+
+    .cart_totals{
+
+        h2{
+            font-weight: bold;
+            text-align: center;
+            text-transform: uppercase;
+            background-color: $color__background-button;
+            padding-top: .5rem;
+            padding-bottom: .5rem;            
+        }
+
+        table.shop_table{
+
+            tbody{
+
+                tr{
+
+                    th,td{
+                        border: .063rem dashed;
+                        padding: .438rem .625rem;
+                    }
+                }
+            }
+        }
+
+        .wc-proceed-to-checkout{
+
+            a.checkout-button{
+                @extend %button_simple;
+            }
+        }
+    }
+}

@@ -109,17 +109,11 @@ header.woocommerce-products-header{
                     bottom: 1%;
                     @include cross_browser_transform_translate(-50%, -1%);
                     z-index: 10;
-                    color: $color__background-body;
                     width: 80%;
-                    margin: .313rem auto 0 auto;
                     text-align: center;
+                    @extend %button_simple;
+                    margin: .313rem auto 0 auto;
                     padding: .3rem .15rem;
-                    border-radius: .25rem;
-                    @include transition(.8s, ease);
-
-                    &:hover{
-                        color: $color__background-body;
-                    }
                 }
 
                 .add_to_cart_button{
