@@ -6,7 +6,7 @@ WooCommerce styles override
 /* 
     ------ Center Absolute under relative
 */
-.cart-collaterals .cart_totals .wc-proceed-to-checkout a.checkout-button, .update_cart, .described .woocommerce-tabs ul.tabs li a, form.cart div.single_variation_wrap .variations_button button[type=submit].button, .fp_products li .fp_container .fp_thumb .button, .fp_products li .fp_container .fp_thumb .added_to_cart {
+.cart-collaterals .cart_totals .wc-proceed-to-checkout a.checkout-button, .update_cart, .woocommerce-notices-wrapper .woocommerce-message a.button, .described .woocommerce-tabs ul.tabs li a, form.cart div.single_variation_wrap .variations_button button[type=submit].button, .fp_products li .fp_container .fp_thumb .button, .fp_products li .fp_container .fp_thumb .added_to_cart {
   background-color: #21759b;
   color: #fff;
   transition: 0.3s ease;
@@ -20,7 +20,7 @@ WooCommerce styles override
   margin-bottom: 0.5rem;
   padding: 1rem 2rem;
 }
-.cart-collaterals .cart_totals .wc-proceed-to-checkout a.checkout-button:hover, .update_cart:hover, .described .woocommerce-tabs ul.tabs li a:hover, form.cart div.single_variation_wrap .variations_button button[type=submit].button:hover, .fp_products li .fp_container .fp_thumb .button:hover, .fp_products li .fp_container .fp_thumb .added_to_cart:hover {
+.cart-collaterals .cart_totals .wc-proceed-to-checkout a.checkout-button:hover, .update_cart:hover, .woocommerce-notices-wrapper .woocommerce-message a.button:hover, .described .woocommerce-tabs ul.tabs li a:hover, form.cart div.single_variation_wrap .variations_button button[type=submit].button:hover, .fp_products li .fp_container .fp_thumb .button:hover, .fp_products li .fp_container .fp_thumb .added_to_cart:hover {
   background-color: #800080;
 }
 
@@ -657,27 +657,12 @@ form.cart div.single_variation_wrap .variations_button div.quantity input[type=n
 }
 
 .woocommerce-notices-wrapper .woocommerce-message {
-  background-color: red;
+  background-color: rgba(231, 42, 42, 0.829);
   color: #fff;
+  min-height: 52px;
+  padding: 1.5rem;
+  text-align: center;
 }
-.woocommerce-notices-wrapper .woocommerce-message a.button {
-  background-color: #21759b;
-  color: #fff;
-  transition: 0.3s ease;
-  -webkit-transition: 0.3s ease;
-  -moz-transition: 0.3s ease;
-  -ms-transition: 0.3s ease;
-  -o-transition: 0.3s ease;
-  border: none;
-  border-radius: 0.1875rem;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  padding: 1rem 2rem;
-}
-.woocommerce-notices-wrapper .woocommerce-message a.button:hover {
-  background-color: #800080;
-}
-
 form.woocommerce-cart-form table.cart th, form.woocommerce-cart-form table.cart td {
   text-align: center;
   padding-top: 0.438rem;
