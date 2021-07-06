@@ -1,6 +1,21 @@
 // cart form
 form.cart{
 
+    // simple products
+    .quantity{
+        input[type=number].qty{
+            border: .063rem solid $color__text-screen;
+            border-radius: 3px;
+            padding: 0.4375rem 0.75rem;
+            color: $color__text-screen;
+        }
+    }
+    
+    button[type=submit].button{
+        @extend %button_simple;
+    }
+
+    // variant products
     table.variations{
 
         tbody{

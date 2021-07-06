@@ -6,7 +6,7 @@ WooCommerce styles override
 /* 
     ------ Center Absolute under relative
 */
-.cart-collaterals .cart_totals .wc-proceed-to-checkout a.checkout-button, .update_cart, .woocommerce-notices-wrapper .woocommerce-message a.button, .described .woocommerce-tabs ul.tabs li a, form.cart div.single_variation_wrap .variations_button button[type=submit].button, .fp_products li .fp_container .fp_thumb .button, .fp_products li .fp_container .fp_thumb .added_to_cart {
+.cart-collaterals .cart_totals .wc-proceed-to-checkout a.checkout-button, .update_cart, .woocommerce-notices-wrapper .woocommerce-message a.button, .described .woocommerce-tabs ul.tabs li a, form.cart div.single_variation_wrap .variations_button button[type=submit].button, form.cart button[type=submit].button, .fp_products li .fp_container .fp_thumb .button, .fp_products li .fp_container .fp_thumb .added_to_cart {
   background-color: #21759b;
   color: #fff;
   transition: 0.3s ease;
@@ -20,7 +20,7 @@ WooCommerce styles override
   margin-bottom: 0.5rem;
   padding: 1rem 2rem;
 }
-.cart-collaterals .cart_totals .wc-proceed-to-checkout a.checkout-button:hover, .update_cart:hover, .woocommerce-notices-wrapper .woocommerce-message a.button:hover, .described .woocommerce-tabs ul.tabs li a:hover, form.cart div.single_variation_wrap .variations_button button[type=submit].button:hover, .fp_products li .fp_container .fp_thumb .button:hover, .fp_products li .fp_container .fp_thumb .added_to_cart:hover {
+.cart-collaterals .cart_totals .wc-proceed-to-checkout a.checkout-button:hover, .update_cart:hover, .woocommerce-notices-wrapper .woocommerce-message a.button:hover, .described .woocommerce-tabs ul.tabs li a:hover, form.cart div.single_variation_wrap .variations_button button[type=submit].button:hover, form.cart button[type=submit].button:hover, .fp_products li .fp_container .fp_thumb .button:hover, .fp_products li .fp_container .fp_thumb .added_to_cart:hover {
   background-color: #800080;
 }
 
@@ -616,6 +616,12 @@ header.woocommerce-products-header h1.woocommerce-products-header__title {
   background-color: #800080;
 }
 
+form.cart .quantity input[type=number].qty {
+  border: 0.063rem solid #21759b;
+  border-radius: 3px;
+  padding: 0.4375rem 0.75rem;
+  color: #21759b;
+}
 form.cart table.variations tbody td.value select {
   border: none;
   border-radius: 3px;
