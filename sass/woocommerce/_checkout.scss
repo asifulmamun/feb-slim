@@ -1,13 +1,99 @@
+// notice
+.woocommerce-info{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    color: $color__background-body;
+
+    a{
+        @extend %button_simple;
+    }
+}
+
+// billing info
 form.checkout{
     .woocommerce-billing-fields{
         .woocommerce-billing-fields__field-wrapper{
             p{
-                display: block;
-                
+                display: inline;
+                min-width: 70%;
+                float: left;
+
                 label{
                     display: block;
+                    min-width: 70%;
+                }
+
+                span{
+
+                    input[type=text],input[type=email]{
+                        display: block;
+                        min-width: 50%;
+                    }
+                    
+                }
+            }
+
+        }
+    }
+}
+
+// Additional Information
+.woocommerce-additional-fields__field-wrapper{
+    p{
+        display: inline;
+        float: left;
+    }
+}
+
+// Checkout Review
+.woocommerce-checkout-review-order{
+    table{
+        th,td{
+            padding-top: .438rem;
+            padding-bottom: .438rem;
+        }
+
+        tfoot{
+            th,td{
+                color: $color__link-visited;
+            }
+        }
+    }
+
+    .woocommerce-checkout-payment{
+        padding-top: 2rem;
+
+        ul.wc_payment_methods{
+            margin: 0;
+            padding: 0;
+
+            li{
+                list-style: none;
+                padding: 1rem;
+            }
+        }
+
+        .place-order{
+            padding-top: 2rem;
+
+            .woocommerce-privacy-policy-text{
+                padding: 1rem;
+                border: .063rem solid;
+                opacity: .6;
+                @include transition(.3s, ease);
+
+                &:hover{
+                    opacity: 1;
+                }
+
+                p{
+                    margin: 0;
                 }
             }
         }
+    }
+
+    button[type=submit].button{
+        margin: 2rem auto;
     }
 }

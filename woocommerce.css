@@ -6,7 +6,7 @@ WooCommerce styles override
 /* 
     ------ Center Absolute under relative
 */
-.cart-collaterals .cart_totals .wc-proceed-to-checkout a.checkout-button, .update_cart, .woocommerce-notices-wrapper .woocommerce-message a.button, .described .woocommerce-tabs ul.tabs li a, form.cart div.single_variation_wrap .variations_button button[type=submit].button, form.cart button[type=submit].button, .fp_products li .fp_container .fp_thumb .button, .fp_products li .fp_container .fp_thumb .added_to_cart {
+.woocommerce-info a, .cart-collaterals .cart_totals .wc-proceed-to-checkout a.checkout-button, .update_cart, .woocommerce-notices-wrapper .woocommerce-message a.button, .described .woocommerce-tabs ul.tabs li a, form.cart div.single_variation_wrap .variations_button button[type=submit].button, form.cart button[type=submit].button, .fp_products li .fp_container .fp_thumb .button, .fp_products li .fp_container .fp_thumb .added_to_cart {
   background-color: #21759b;
   color: #fff;
   transition: 0.3s ease;
@@ -20,7 +20,7 @@ WooCommerce styles override
   margin-bottom: 0.5rem;
   padding: 1rem 2rem;
 }
-.cart-collaterals .cart_totals .wc-proceed-to-checkout a.checkout-button:hover, .update_cart:hover, .woocommerce-notices-wrapper .woocommerce-message a.button:hover, .described .woocommerce-tabs ul.tabs li a:hover, form.cart div.single_variation_wrap .variations_button button[type=submit].button:hover, form.cart button[type=submit].button:hover, .fp_products li .fp_container .fp_thumb .button:hover, .fp_products li .fp_container .fp_thumb .added_to_cart:hover {
+.woocommerce-info a:hover, .cart-collaterals .cart_totals .wc-proceed-to-checkout a.checkout-button:hover, .update_cart:hover, .woocommerce-notices-wrapper .woocommerce-message a.button:hover, .described .woocommerce-tabs ul.tabs li a:hover, form.cart div.single_variation_wrap .variations_button button[type=submit].button:hover, form.cart button[type=submit].button:hover, .fp_products li .fp_container .fp_thumb .button:hover, .fp_products li .fp_container .fp_thumb .added_to_cart:hover {
   background-color: #800080;
 }
 
@@ -741,11 +741,69 @@ form.woocommerce-cart-form table.cart td.product-remove a.remove:hover {
 .cart-collaterals .cart_totals .wc-proceed-to-checkout {
   margin-top: 3.125rem;
 }
+.woocommerce-info {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  color: #fff;
+}
 form.checkout .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper p {
-  display: block;
+  display: inline;
+  min-width: 70%;
+  float: left;
 }
 form.checkout .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper p label {
   display: block;
+  min-width: 70%;
+}
+form.checkout .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper p span input[type=text], form.checkout .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper p span input[type=email] {
+  display: block;
+  min-width: 50%;
+}
+
+.woocommerce-additional-fields__field-wrapper p {
+  display: inline;
+  float: left;
+}
+
+.woocommerce-checkout-review-order table th, .woocommerce-checkout-review-order table td {
+  padding-top: 0.438rem;
+  padding-bottom: 0.438rem;
+}
+.woocommerce-checkout-review-order table tfoot th, .woocommerce-checkout-review-order table tfoot td {
+  color: #800080;
+}
+.woocommerce-checkout-review-order .woocommerce-checkout-payment {
+  padding-top: 2rem;
+}
+.woocommerce-checkout-review-order .woocommerce-checkout-payment ul.wc_payment_methods {
+  margin: 0;
+  padding: 0;
+}
+.woocommerce-checkout-review-order .woocommerce-checkout-payment ul.wc_payment_methods li {
+  list-style: none;
+  padding: 1rem;
+}
+.woocommerce-checkout-review-order .woocommerce-checkout-payment .place-order {
+  padding-top: 2rem;
+}
+.woocommerce-checkout-review-order .woocommerce-checkout-payment .place-order .woocommerce-privacy-policy-text {
+  padding: 1rem;
+  border: 0.063rem solid;
+  opacity: 0.6;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+}
+.woocommerce-checkout-review-order .woocommerce-checkout-payment .place-order .woocommerce-privacy-policy-text:hover {
+  opacity: 1;
+}
+.woocommerce-checkout-review-order .woocommerce-checkout-payment .place-order .woocommerce-privacy-policy-text p {
+  margin: 0;
+}
+.woocommerce-checkout-review-order button[type=submit].button {
+  margin: 2rem auto;
 }
 
 /*# sourceMappingURL=woocommerce.css.map */
