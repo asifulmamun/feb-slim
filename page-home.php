@@ -1,6 +1,6 @@
 <?php
 /**
-* Template Name: Shop Home
+* Template Name: Home/Shop - Blank
 *
 * @package WordPress
 * @subpackage feb-slim

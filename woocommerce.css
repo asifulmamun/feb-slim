@@ -741,5 +741,11 @@ form.woocommerce-cart-form table.cart td.product-remove a.remove:hover {
 .cart-collaterals .cart_totals .wc-proceed-to-checkout {
   margin-top: 3.125rem;
 }
+form.checkout .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper p {
+  display: block;
+}
+form.checkout .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper p label {
+  display: block;
+}
 
 /*# sourceMappingURL=woocommerce.css.map */

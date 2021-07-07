@@ -1,0 +1,13 @@
+form.checkout{
+    .woocommerce-billing-fields{
+        .woocommerce-billing-fields__field-wrapper{
+            p{
+                display: block;
+                
+                label{
+                    display: block;
+                }
+            }
+        }
+    }
+}
