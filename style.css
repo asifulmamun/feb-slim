@@ -892,6 +892,18 @@ textarea {
   margin-top: 3.125rem;
 }
 
+a {
+  text-decoration: none;
+  transition: 0.5s ease;
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -ms-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+}
+a:hover {
+  text-decoration: underline;
+}
+
 /* Alignments
 --------------------------------------------- */
 .alignleft {
@@ -926,7 +938,7 @@ textarea {
 }
 .site-branding .custom-logo-link {
   max-width: 15.625rem;
-  max-height: 10.938rem;
+  max-height: 10.625rem;
   display: block;
   margin: 0 auto;
   overflow: hidden;

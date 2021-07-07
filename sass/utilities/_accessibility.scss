@@ -40,3 +40,12 @@
 .simple_margin_top{
 	margin-top: 3.125rem;
 }
+
+a{
+	text-decoration: none;
+	@include transition(0.5s, ease);
+
+	&:hover{
+		text-decoration: underline;
+	}
+}
