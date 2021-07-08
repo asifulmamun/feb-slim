@@ -23,6 +23,8 @@ do_action('woocommerce_before_cart'); ?>
 <div class="container">
 	<div class="row">
 
+
+
 		<div class="col-sm-12 col-12 col-md-12 col-lg-12 col-xl-12">
 			<form class="woocommerce-cart-form" action="<?php echo esc_url(wc_get_cart_url()); ?>" method="post">
 				<?php do_action('woocommerce_before_cart_table'); ?>
@@ -30,8 +32,8 @@ do_action('woocommerce_before_cart'); ?>
 				<table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents" cellspacing="0">
 					<thead>
 						<tr>
-							<th class="product-remove">Action</th>
-							<th class="product-thumbnail">Image</th>
+							<th class="product-remove">&nbsp;</th>
+							<th class="product-thumbnail">&nbsp;</th>
 							<th class="product-name"><?php esc_html_e('Product', 'woocommerce'); ?></th>
 							<th class="product-price"><?php esc_html_e('Price', 'woocommerce'); ?></th>
 							<th class="product-quantity"><?php esc_html_e('Quantity', 'woocommerce'); ?></th>
@@ -140,6 +142,24 @@ do_action('woocommerce_before_cart'); ?>
 
 						<?php do_action('woocommerce_cart_contents'); ?>
 
+						<tr>
+							<td colspan="6" class="actions">
+
+								<?php if (wc_coupons_enabled()) { ?>
+									<div class="coupon">
+										<label for="coupon_code"><?php esc_html_e('Coupon:', 'woocommerce'); ?></label> <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php esc_attr_e('Coupon code', 'woocommerce'); ?>" /> <button type="submit" class="button" name="apply_coupon" value="<?php esc_attr_e('Apply coupon', 'woocommerce'); ?>"><?php esc_attr_e('Apply coupon', 'woocommerce'); ?></button>
+										<?php do_action('woocommerce_cart_coupon'); ?>
+									</div>
+								<?php } ?>
+
+								<button type="submit" class="button update_cart" name="update_cart" value="<?php esc_attr_e('Update cart', 'woocommerce'); ?>"><?php esc_html_e('Update cart', 'woocommerce'); ?></button>
+
+								<?php do_action('woocommerce_cart_actions'); ?>
+
+								<?php wp_nonce_field('woocommerce-cart', 'woocommerce-cart-nonce'); ?>
+							</td>
+						</tr>
+
 						<?php do_action('woocommerce_after_cart_contents'); ?>
 					</tbody>
 				</table>
@@ -147,24 +167,11 @@ do_action('woocommerce_before_cart'); ?>
 			</form>
 		</div>
 
-		<div class="col simple_margin_top">
-			<?php if (wc_coupons_enabled()) { ?>
-				<div class="coupon">
-					<label for="coupon_code"><?php esc_html_e('Coupon', 'woocommerce'); ?></label> <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php esc_attr_e('Coupon code', 'woocommerce'); ?>" /> <button type="submit" class="button" name="apply_coupon" value="<?php esc_attr_e('Apply coupon', 'woocommerce'); ?>"><?php esc_attr_e('Apply coupon', 'woocommerce'); ?></button>
-					<?php do_action('woocommerce_cart_coupon'); ?>
-				</div>
-			<?php } ?>
 
-			<button type="submit" class="button update_cart" name="update_cart" value="<?php esc_attr_e('Update cart', 'woocommerce'); ?>"><?php esc_html_e('Update cart', 'woocommerce'); ?></button>
-
-			<?php do_action('woocommerce_cart_actions'); ?>
-
-			<?php wp_nonce_field('woocommerce-cart', 'woocommerce-cart-nonce'); ?>
+		<div class="col-sm-12 col-12 col-md-8 col-lg-8 col-xl-8 offset-md-2 offset-lg-2 offset-xl-2">
 
 			<?php do_action('woocommerce_before_cart_collaterals'); ?>
-		</div>
-		<div class="col simple_margin_top">
-			
+
 			<div class="cart-collaterals">
 				<?php
 				/**
@@ -176,8 +183,12 @@ do_action('woocommerce_before_cart'); ?>
 				do_action('woocommerce_cart_collaterals');
 				?>
 			</div>
+
 			<?php do_action('woocommerce_after_cart'); ?>
+
 		</div>
+
+
 
 	</div>
 </div>

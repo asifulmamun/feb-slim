@@ -28,11 +28,24 @@
 		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'feb-slim'); ?></a>
 
 		<header id="masthead" class="site-header">
-
+	
 			<div class="container-fluid">
 				<div class="row">
 
-					<div class="col-md-4 offset-md-4">
+					<div class="col-12 text-right">
+						Account
+						
+
+
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+
+
+
+
+					</div>
+
+					<div class="col-12">
 						<div class="site-branding">
 							<?php
 							the_custom_logo();
@@ -53,11 +66,6 @@
 							<?php endif; ?>
 						</div><!-- .site-branding -->
 					</div>
-
-					<div class="col-md-4">
-						Account
-					</div>
-
 				</div>
 			</div>
 
