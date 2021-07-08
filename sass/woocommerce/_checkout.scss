@@ -37,8 +37,37 @@ form.checkout{
     }
 }
 
+
+// Ship Different Address
+.shipping_address{
+    .woocommerce-shipping-fields__field-wrapper{
+        p{
+            display: inline;
+            min-width: 70%;
+            float: left;
+
+            label{
+                display: block;
+                min-width: 70%;
+            }
+
+            span{
+
+                input[type=text],input[type=email]{
+                    display: block;
+                    min-width: 50%;
+                }
+                
+            }
+        }
+    }
+}
+
+
 // Additional Information
 .woocommerce-additional-fields__field-wrapper{
+    display: block;
+    
     p{
         display: inline;
         float: left;

@@ -760,6 +760,23 @@ form.checkout .woocommerce-billing-fields .woocommerce-billing-fields__field-wra
   min-width: 50%;
 }
 
+.shipping_address .woocommerce-shipping-fields__field-wrapper p {
+  display: inline;
+  min-width: 70%;
+  float: left;
+}
+.shipping_address .woocommerce-shipping-fields__field-wrapper p label {
+  display: block;
+  min-width: 70%;
+}
+.shipping_address .woocommerce-shipping-fields__field-wrapper p span input[type=text], .shipping_address .woocommerce-shipping-fields__field-wrapper p span input[type=email] {
+  display: block;
+  min-width: 50%;
+}
+
+.woocommerce-additional-fields__field-wrapper {
+  display: block;
+}
 .woocommerce-additional-fields__field-wrapper p {
   display: inline;
   float: left;
