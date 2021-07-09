@@ -160,7 +160,7 @@ function feb_slim_scripts() {
 
 	/* Jquery
 	-----------*/
-	wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', array('jquery'), '3.6.0', true );
+	// wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', array('jquery'), '3.6.0', true );
 
 
 	/* Bootstrap

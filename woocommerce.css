@@ -686,11 +686,11 @@ form.woocommerce-cart-form td.product-quantity .quantity input[type=number] {
   max-width: 5rem;
 }
 
-.calculated_shipping ul.woocommerce-shipping-methods {
+.cart_totals ul {
   margin: 0;
   padding: 0;
 }
-.calculated_shipping ul.woocommerce-shipping-methods li {
+.cart_totals ul li {
   list-style: none;
 }
 
@@ -741,6 +741,13 @@ form.woocommerce-cart-form td.product-quantity .quantity input[type=number] {
   padding-bottom: 1.5rem;
   color: #fff;
 }
+form.checkout_coupon p {
+  text-align: center;
+}
+form.checkout_coupon p.form-row {
+  justify-content: center;
+}
+
 form.checkout .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper p {
   display: inline;
   min-width: 70%;
@@ -816,6 +823,14 @@ form.checkout .woocommerce-billing-fields .woocommerce-billing-fields__field-wra
 }
 .woocommerce-checkout-review-order button[type=submit].button {
   margin: 2rem auto;
+}
+
+.woocommerce-shipping-totals ul {
+  margin: 0;
+  padding: 0;
+}
+.woocommerce-shipping-totals ul li {
+  list-style: none;
 }
 
 /*# sourceMappingURL=woocommerce.css.map */

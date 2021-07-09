@@ -9,6 +9,17 @@
     }
 }
 
+// Checkout Coupon
+form.checkout_coupon{
+    p{
+        text-align: center;
+    }
+    
+    p.form-row{
+        justify-content: center;
+    }
+}
+
 // billing info
 form.checkout{
     .woocommerce-billing-fields{
@@ -124,5 +135,17 @@ form.checkout{
 
     button[type=submit].button{
         margin: 2rem auto;
+    }
+}
+
+// Confirm Cart & Shipping
+.woocommerce-shipping-totals{
+    ul{
+        margin: 0;
+        padding: 0;
+
+        li{
+            list-style: none;
+        }
     }
 }
