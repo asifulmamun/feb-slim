@@ -1,4 +1,28 @@
 // woo commerce cart form
+form.woocommerce-cart-form{
+    td.product-remove{
+        a.remove{
+            font-size: 2rem;
+            color: $notice_color;
+            @include transition(0.3s, ease);
+
+            &:hover{
+                text-decoration: none;
+                color: $danger_color;
+            }
+        }
+    }
+
+    td.product-quantity{
+        .quantity{
+            input[type=number]{
+                max-width: 5rem;
+            }
+        }
+    }
+}
+
+// shipping
 .calculated_shipping{
     ul.woocommerce-shipping-methods{
         margin: 0;

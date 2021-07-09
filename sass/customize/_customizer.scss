@@ -32,3 +32,31 @@ aside.widget-area{
             }
         }
 }
+.top_menu{
+    padding-top: 1rem;
+
+    ul{
+        display: flex;
+        justify-content: flex-end;
+        margin: 0;
+        padding: 0;
+
+        li{
+            list-style: none;
+            padding: .5rem .688rem .5rem .688rem;
+            margin: 0;
+            
+            svg{
+                width: 1rem;
+                color: $color__text-main;
+                @include transition(.5s, ease);
+                cursor: pointer;
+
+                &:hover{
+                    color: $color__link;
+                }
+            }
+        }
+    }
+
+}

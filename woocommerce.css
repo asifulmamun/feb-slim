@@ -669,6 +669,23 @@ form.cart div.single_variation_wrap .variations_button div.quantity input[type=n
   padding: 1.5rem;
   text-align: center;
 }
+form.woocommerce-cart-form td.product-remove a.remove {
+  font-size: 2rem;
+  color: rgba(231, 42, 42, 0.829);
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+}
+form.woocommerce-cart-form td.product-remove a.remove:hover {
+  text-decoration: none;
+  color: red;
+}
+form.woocommerce-cart-form td.product-quantity .quantity input[type=number] {
+  max-width: 5rem;
+}
+
 .calculated_shipping ul.woocommerce-shipping-methods {
   margin: 0;
   padding: 0;

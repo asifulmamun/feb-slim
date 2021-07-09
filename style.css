@@ -961,4 +961,32 @@ aside.widget-area ul li {
   list-style: none;
 }
 
+.top_menu {
+  padding-top: 1rem;
+}
+.top_menu ul {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+}
+.top_menu ul li {
+  list-style: none;
+  padding: 0.5rem 0.688rem 0.5rem 0.688rem;
+  margin: 0;
+}
+.top_menu ul li svg {
+  width: 1rem;
+  color: #404040;
+  transition: 0.5s ease;
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -ms-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  cursor: pointer;
+}
+.top_menu ul li svg:hover {
+  color: #4169e1;
+}
+
 /*# sourceMappingURL=style.css.map */
