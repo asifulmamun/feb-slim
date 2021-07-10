@@ -6,7 +6,7 @@ WooCommerce styles override
 /* 
     ------ Center Absolute under relative
 */
-.woocommerce-info a, .cart-collaterals .cart_totals .wc-proceed-to-checkout a.checkout-button, .woocommerce-notices-wrapper .woocommerce-message a.button, .described .woocommerce-tabs ul.tabs li a, form.cart div.single_variation_wrap .variations_button button[type=submit].button, form.cart button[type=submit].button, .fp_products li .fp_container .fp_thumb .button, .fp_products li .fp_container .fp_thumb .added_to_cart {
+.woocommerce-Addresses .edit, .woocommerce-info a, .cart-collaterals .cart_totals .wc-proceed-to-checkout a.checkout-button, .woocommerce-notices-wrapper .woocommerce-message a.button, .described .woocommerce-tabs ul.tabs li a, form.cart div.single_variation_wrap .variations_button button[type=submit].button, form.cart button[type=submit].button, .fp_products li .fp_container .fp_thumb .button, .fp_products li .fp_container .fp_thumb .added_to_cart {
   background-color: #21759b;
   color: #fff;
   transition: 0.3s ease;
@@ -20,7 +20,7 @@ WooCommerce styles override
   margin-bottom: 0.5rem;
   padding: 1rem 2rem;
 }
-.woocommerce-info a:hover, .cart-collaterals .cart_totals .wc-proceed-to-checkout a.checkout-button:hover, .woocommerce-notices-wrapper .woocommerce-message a.button:hover, .described .woocommerce-tabs ul.tabs li a:hover, form.cart div.single_variation_wrap .variations_button button[type=submit].button:hover, form.cart button[type=submit].button:hover, .fp_products li .fp_container .fp_thumb .button:hover, .fp_products li .fp_container .fp_thumb .added_to_cart:hover {
+.woocommerce-Addresses .edit:hover, .woocommerce-info a:hover, .cart-collaterals .cart_totals .wc-proceed-to-checkout a.checkout-button:hover, .woocommerce-notices-wrapper .woocommerce-message a.button:hover, .described .woocommerce-tabs ul.tabs li a:hover, form.cart div.single_variation_wrap .variations_button button[type=submit].button:hover, form.cart button[type=submit].button:hover, .fp_products li .fp_container .fp_thumb .button:hover, .fp_products li .fp_container .fp_thumb .added_to_cart:hover {
   background-color: #800080;
 }
 
@@ -831,6 +831,39 @@ form.checkout .woocommerce-billing-fields .woocommerce-billing-fields__field-wra
 }
 .woocommerce-shipping-totals ul li {
   list-style: none;
+}
+
+nav.woocommerce-MyAccount-navigation ul {
+  margin: 0;
+  padding: 0;
+}
+nav.woocommerce-MyAccount-navigation ul li {
+  list-style: none;
+  background: #ccc #ccc #bbb;
+  margin: 0.5rem 1rem;
+  padding: 0.5rem;
+  border-radius: 0.188rem;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+}
+nav.woocommerce-MyAccount-navigation ul li:hover {
+  background-color: #21759b;
+}
+nav.woocommerce-MyAccount-navigation ul li:hover a {
+  color: #fff;
+}
+nav.woocommerce-MyAccount-navigation ul li a {
+  color: #21759b;
+}
+
+.woocommerce-Addresses .edit {
+  padding: 0.313rem 0.5rem;
+}
+.woocommerce-Addresses address {
+  padding-top: 1rem;
 }
 
 /*# sourceMappingURL=woocommerce.css.map */

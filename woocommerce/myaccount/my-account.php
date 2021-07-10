@@ -23,7 +23,7 @@ defined('ABSPATH') || exit;
 <div class="container">
 	<div class="row">
 
-		<div class="col-4">
+		<div class="col-sm-12 col-12 col-md-4 col-lg-4 col-xl-4">
 			<?php
 			/**
 			 * My Account navigation.
@@ -34,7 +34,7 @@ defined('ABSPATH') || exit;
 			?>
 		</div>
 
-		<div class="col-8">
+		<div class="col-sm-12 col-12 col-md-8 col-lg-8 col-xl-8">
 			<div class="woocommerce-MyAccount-content">
 				<?php
 				/**

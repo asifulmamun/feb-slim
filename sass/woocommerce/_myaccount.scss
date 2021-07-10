@@ -1,0 +1,41 @@
+// Navigation
+nav.woocommerce-MyAccount-navigation{
+    ul{
+        margin: 0;
+        padding: 0;
+
+        li{
+            list-style: none;
+            background: $color__border-button;
+            margin: .5rem 1rem;
+            padding: .5rem;
+            border-radius: .188rem;
+            @include transition(.3s, ease);
+
+            &:hover{
+                background-color: $color__text-screen;
+
+                a{
+                    color: $color__background-body;
+                }
+            }
+
+            a{
+                color: $color__text-screen; 
+            }
+        }
+    }
+}
+
+
+// Address Tab
+.woocommerce-Addresses{
+    .edit{
+        @extend %button_simple;
+        padding: .313rem .5rem;
+    }
+
+    address{
+        padding-top: 1rem;
+    }
+}
