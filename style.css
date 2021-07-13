@@ -974,19 +974,132 @@ aside.widget-area ul li {
   list-style: none;
   padding: 0.5rem 0.688rem 0.5rem 0.688rem;
   margin: 0;
+  cursor: pointer;
 }
-.top_menu ul li svg {
-  width: 1rem;
+.top_menu ul li a, .top_menu ul li i {
   color: #404040;
   transition: 0.5s ease;
   -webkit-transition: 0.5s ease;
   -moz-transition: 0.5s ease;
   -ms-transition: 0.5s ease;
   -o-transition: 0.5s ease;
+}
+.top_menu ul li a:hover, .top_menu ul li i:hover {
+  color: #4169e1;
+}
+
+#ajax_search_wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  min-height: 40vh;
+  padding: 5rem 2rem;
+  background-color: #fff;
+  border-bottom: 0.063rem solid #ccc;
+  display: none;
+}
+#ajax_search_wrap form.search-form {
+  display: block;
+  margin: 0 auto;
+}
+#ajax_search_wrap form.search-form .ajax_search {
+  display: inline-block;
+  position: relative;
+  width: 80%;
+  height: 2.75rem;
+  border: 0.063rem solid #ccc;
+}
+#ajax_search_wrap form.search-form .ajax_search input[type=text] {
+  width: 100%;
+  min-height: 2.75rem;
+  float: left;
+  background-color: transparent;
+  border: none;
+  border-radius: 0rem;
+}
+#ajax_search_wrap form.search-form .ajax_search input[type=text]:focus-visible {
+  border: none;
+}
+#ajax_search_wrap form.search-form .ajax_search button[type=submit] {
+  all: unset;
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  z-index: 11;
+  min-height: 2.75rem;
+  background-color: transparent;
+  border: none;
+  border-radius: 0rem;
   cursor: pointer;
 }
-.top_menu ul li svg:hover {
-  color: #4169e1;
+#ajax_search_wrap form.search-form .ajax_search #datafetch {
+  position: absolute;
+  left: 0;
+  top: 2.75rem;
+  z-index: 11;
+  width: 100%;
+  padding: 0;
+  border-left: 0.063rem solid #ccc;
+  border-right: 0.063rem solid #ccc;
+  background-color: #fff;
+}
+#ajax_search_wrap form.search-form .ajax_search #datafetch ul {
+  margin: 0;
+  padding: 0;
+}
+#ajax_search_wrap form.search-form .ajax_search #datafetch ul li {
+  list-style: none;
+  padding: 1rem 0;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+}
+#ajax_search_wrap form.search-form .ajax_search #datafetch ul li:hover {
+  background-color: #ebebeb;
+}
+#ajax_search_wrap form.search-form .ajax_search #datafetch ul li .thumbnail {
+  overflow: hidden;
+}
+#ajax_search_wrap form.search-form .ajax_search #datafetch ul li .thumbnail img {
+  width: 2.5rem;
+}
+#ajax_search_wrap form.search-form .ajax_search #datafetch ul li a {
+  color: #666;
+}
+#ajax_search_wrap form.search-form .ajax_search #datafetch ul li:last-child {
+  border-bottom: 0.063rem solid #ccc;
+}
+#ajax_search_wrap form.search-form .ajax_search #datafetch .heading {
+  margin: 1rem 2.5rem;
+  font-size: 0.875rem;
+  border-bottom: 0.063rem solid #ccc;
+}
+#ajax_search_wrap form.search-form .ajax_search #datafetch .search_key {
+  border-bottom: 0.063rem solid #ccc;
+  padding: 1rem 1.5rem;
+}
+#ajax_search_wrap form.search-form #close_search {
+  all: unset;
+  min-width: 17%;
+  min-height: 2.75rem;
+  float: right;
+  position: relative;
+  cursor: pointer;
+}
+#ajax_search_wrap form.search-form #close_search i {
+  position: absolute;
+  left: 0%;
+  top: 50%;
+  transform: translate(0%, -50%);
+  -webkit-transform: translate(0%, -50%);
+  -moz-transform: translate(0%, -50%);
+  -ms-transform: translate(0%, -50%);
+  -o-transform: translate(0%, -50%);
+  font-size: 1.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

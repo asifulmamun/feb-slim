@@ -157,7 +157,10 @@ function feb_slim_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-
+	/* Font Awesome
+	-----------*/
+	wp_enqueue_script( 'fontawesome-script', '//kit.fontawesome.com/7b253b0123.js', array(), '5.15', true );
+	
 	/* Jquery
 	-----------*/
 	// wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', array('jquery'), '3.6.0', true );
@@ -223,3 +226,87 @@ add_action( 'after_setup_theme', 'register_navwalker' );
 register_nav_menus( array(
     'primary' => __( 'Primary Menu', 'feb-slim' ),
 ) );
+
+
+
+/* Ajax Search
+-------------*/
+
+// the ajax function
+add_action('wp_ajax_data_fetch' , 'data_fetch');
+add_action('wp_ajax_nopriv_data_fetch','data_fetch');
+function data_fetch(){
+
+
+    $the_query = new WP_Query( array( 'posts_per_page' => 5, 's' => esc_attr( $_POST['keyword'] ), 'post_type' => 'product' ) );
+
+	echo '<div class="heading">VÖRUR</div>';
+	echo '<ul>';
+    if( $the_query->have_posts() ) :
+        while( $the_query->have_posts() ): $the_query->the_post(); ?>
+
+            <li>
+				<div class="row">
+					<div class="col-2 thumbnail text-right"><a class="titile" href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a></div>
+					<div class="col-10"><a class="titile" href="<?php the_permalink(); ?>"><?php the_title();?></a></div>
+				</div>
+			</li>
+
+        <?php endwhile;
+		wp_reset_postdata();  
+	else:
+		echo '<h3>No Results Found</h3>';
+    endif;
+
+	echo '</ul>';
+	echo '<div class="search_key">Leita að: ' . $_POST['keyword'] . '</div>';
+
+    die();
+}
+// add the ajax fetch js
+add_action( 'wp_footer', 'ajax_fetch' );
+function ajax_fetch() {
+?>
+
+<script type="text/javascript">
+function fetchResults(){
+	var keyword = jQuery('#searchInput').val();
+
+	if(keyword == ""){
+		jQuery('#datafetch').html("");
+	} else {
+		jQuery.ajax({
+			url: '<?php echo admin_url('admin-ajax.php'); ?>',
+			type: 'post',
+			data: { action: 'data_fetch', keyword: keyword  },
+			success: function(data) {
+				jQuery('#datafetch').html( data );
+			}
+		});
+	}
+}
+
+// search bar open - display block
+document.getElementById("search_icon").addEventListener("click", search_icon);
+function search_icon(){
+	document.getElementById('ajax_search_wrap').style.display = 'block';
+	document.getElementById('primary').style.opacity = '.3';
+}
+
+// search bar closing - display none
+document.getElementById("close_search").addEventListener("click", close_search);
+function close_search(){
+	opacityOK();
+}
+
+document.getElementById("primary").addEventListener("click", opacityOK);
+function opacityOK(){
+	document.getElementById('ajax_search_wrap').style.display = 'none';
+	document.getElementById('primary').style.opacity = 'inherit';
+}
+
+
+</script>
+
+<?php
+}
