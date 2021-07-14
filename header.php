@@ -32,6 +32,7 @@
 			<div class="container-fluid">
 				<div class="row">
 
+					<!-- top naigatoin -->
 					<div class="col-12 text-right">
 						<div class="top_menu">
 							<ul>
@@ -48,104 +49,74 @@
 						</div>
 					</div>
 
+					<!-- search bar -->
 					<div id="ajax_search_wrap">
-						
-							<form role="search" method="get" class="search-form" action="http://localhost/wp/" autocomplete="off">
-								<div class="container">		
-									<div class="row">
-
-										<div class="col-sm-12 col-12 col-md-8 col-lg-8 col-xl-8 offset-md-2 offset-lg-2 offset-xl-2">
-											<div class="ajax_search">
-												<input  id="searchInput" onkeyup="fetchResults()" type="text" class="search-field" value="<?php echo get_search_query(); ?>" placeholder="Search …" name="s">
-												<button id="submit" type="submit"><i class="fas fa-search"></i></button>
-												<div id="datafetch"></div>
-											</div>
-											<div id="close_search"><i class="fas fa-times"></i></div>
-
+						<form role="search" method="get" class="search-form" action="http://localhost/wp/" autocomplete="off">
+							<div class="container">
+								<div class="row">
+									<div class="col-sm-12 col-12 col-md-8 col-lg-8 col-xl-8 offset-md-2 offset-lg-2 offset-xl-2">
+										<div class="ajax_search">
+											<input id="searchInput" onkeyup="fetchResults()" type="text" class="search-field" value="<?php echo get_search_query(); ?>" placeholder="Search …" name="s">
+											<button id="submit" type="submit"><i class="fas fa-search"></i></button>
+											<div id="datafetch"></div>
 										</div>
-
-										<div class="col-sm-12 col-12 col-md-8 col-lg-8 col-xl-8 offset-md-2 offset-lg-2 offset-xl-2">
-											
-										</div>
-
+										<div id="close_search"><i class="fas fa-times"></i></div>
 									</div>
 								</div>
-							</form>
-
-
-							<!-- <form role="search" method="get" class="search-form" action="http://localhost/wp/" autocomplete="off">
-								<div class="form-row">
-									<div class="col-md-4 mb-3">
-										<div class="input-group">
-											<input id="validationDefaultUsername" onkeyup="fetchResults()" type="search" value="<?php echo get_search_query(); ?>" placeholder="Search …" name="s" class="form-control" placeholder="Username" aria-describedby="inputGroupPrepend2" required>
-											<div class="input-group-prepend">
-												<span class="input-group-text" id="inputGroupPrepend2">
-													<input style="all:unset;cursor:pointer;" type="submit" class="search-submit" value="Search">
-												</span>
-												
-												<span id="search_close">Close</span>
-											</div>
-										</div>
-									</div>
-								</div> -->
-
-								<div id="datafetch"></div>
-
-							</form>
-
-
-						</div>
+							</div>
+						</form>
 					</div>
+				</div>
 
 
-					<div class="col-12">
-						<div class="site-branding">
-							<?php
-							the_custom_logo();
-							if (is_front_page() && is_home()) :
-							?>
-								<h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
-							<?php
-							else :
-							?>
-								<p class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></p>
-							<?php
-							endif;
-							$feb_slim_description = get_bloginfo('description', 'display');
-							if ($feb_slim_description || is_customize_preview()) :
-							?>
-								<p class="site-description"><?php echo $feb_slim_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
-															?></p>
-							<?php endif; ?>
-						</div><!-- .site-branding -->
-					</div>
+				<div class="col-12">
+					<div class="site-branding">
+						<?php
+						the_custom_logo();
+						if (is_front_page() && is_home()) :
+						?>
+							<h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
+						<?php
+						else :
+						?>
+							<p class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></p>
+						<?php
+						endif;
+						$feb_slim_description = get_bloginfo('description', 'display');
+						if ($feb_slim_description || is_customize_preview()) :
+						?>
+							<p class="site-description"><?php echo $feb_slim_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
+														?></p>
+						<?php endif; ?>
+					</div><!-- .site-branding -->
 				</div>
 			</div>
+	</div>
 
 
 
-			<nav class="navbar navbar-expand-md navbar-light text-center" role="navigation">
-				<div class="container-fluid">
+	<nav class="navbar navbar-expand-md navbar-light text-center" role="navigation">
+		<div class="container-fluid">
 
-					<!-- Brand and toggle get grouped for better mobile display -->
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="<?php esc_attr_e('Primary Menu', 'feb-slim'); ?>">
-						<span class="navbar-toggler-icon"></span>
-					</button>
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="<?php esc_attr_e('Primary Menu', 'feb-slim'); ?>">
+				<span class="navbar-toggler-icon"></span>
+			</button>
 
-					<?php
-					wp_nav_menu(array(
-						'theme_location'    => 'primary',
-						'depth'             => 2,
-						'container'         => 'div',
-						'container_class'   => 'collapse navbar-collapse',
-						'container_id'      => 'bs-example-navbar-collapse-1',
-						'menu_class'        => 'nav navbar-nav',
-						'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
-						'walker'            => new WP_Bootstrap_Navwalker(),
-					));
-					?>
+			<?php
+			wp_nav_menu(array(
+				'theme_location'    => 'primary',
+				'depth'             => 2,
+				'container'         => 'div',
+				'container_class'   => 'collapse navbar-collapse',
+				'container_id'      => 'bs-example-navbar-collapse-1',
+				'menu_class'        => 'nav navbar-nav',
+				'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+				'walker'            => new WP_Bootstrap_Navwalker(),
+			));
+			?>
 
-				</div>
-			</nav>
+		</div>
+	</nav>
 
-		</header><!-- #masthead -->
+	</header><!-- #masthead -->

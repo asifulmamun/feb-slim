@@ -184,18 +184,10 @@ add_action( 'widgets_init', 'feb_slim_widgets_init' );
  */
 function feb_slim_scripts() {
 
-	/* Default JS
-	----------- */
-	wp_enqueue_script( 'feb-slim-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
-
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
-
 	/* Font Awesome
 	-----------*/
-	wp_enqueue_script( 'fontawesome-script', '//kit.fontawesome.com/7b253b0123.js', array(), '5.15', true );
-	
+	// wp_enqueue_script( 'fontawesome-script', '//kit.fontawesome.com/7b253b0123.js', array(), '5.15', true );
+
 	/* Jquery
 	-----------*/
 	// wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', array('jquery'), '3.6.0', true );
@@ -204,13 +196,24 @@ function feb_slim_scripts() {
 	/* Bootstrap
 	---------------*/
 	// wp_enqueue_style( 'bootstrap', '//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css', array(), '4.3.1', 'all' );
-	wp_enqueue_script( 'popper', '//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js', array('jquery'), '1.14.7', true );
-	wp_enqueue_script( 'bootstrap', '//stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', array('jquery'), '4.3.2', true );
+	// wp_enqueue_script( 'popper', '//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js', array('jquery'), '1.14.7', true );
+	// wp_enqueue_script( 'bootstrap', '//stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', array('jquery'), '4.3.2', true );
 
 	/* Main/Default Css
 	----------------- */
 	wp_enqueue_style( 'feb-slim-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'feb-slim-style', 'rtl', 'replace' );
+
+	/* Default JS
+	----------- */
+	wp_enqueue_script( 'fontawesome-script', get_template_directory_uri() . '/js/font-awesome.min.js', array(), '5.15', true );
+	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '4.3.1', true );
+	wp_enqueue_script( 'popper', get_template_directory_uri() . '/js/bootstrap_popper.min.js', array(), '1.14.7', true );
+	wp_enqueue_script( 'feb-slim-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
+	}
 
 }
 add_action( 'wp_enqueue_scripts', 'feb_slim_scripts' );
