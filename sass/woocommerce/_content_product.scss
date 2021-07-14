@@ -196,7 +196,10 @@ header.woocommerce-products-header{
 }
 
 // Pagination
-.woocommerce-pagination{
+nav.woocommerce-pagination{
+    max-width: 100%;
+    overflow: hidden;
+
     ul{
         display: flex;
         justify-content: center;

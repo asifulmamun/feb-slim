@@ -203,7 +203,7 @@ function feb_slim_scripts() {
 
 	/* Bootstrap
 	---------------*/
-	wp_enqueue_style( 'bootstrap', '//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css', array(), '4.3.1', 'all' );
+	// wp_enqueue_style( 'bootstrap', '//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css', array(), '4.3.1', 'all' );
 	wp_enqueue_script( 'popper', '//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js', array('jquery'), '1.14.7', true );
 	wp_enqueue_script( 'bootstrap', '//stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', array('jquery'), '4.3.2', true );
 
@@ -334,7 +334,10 @@ function close_search(){
 	opacityOK();
 }
 
-document.getElementById("primary").addEventListener("click", opacityOK);
+if(typeof(document.getElementById("primary")) != 'undefined' && document.getElementById("primary") != null){
+	document.getElementById("primary").addEventListener("click", opacityOK);
+}
+
 function opacityOK(){
 	document.getElementById('ajax_search_wrap').style.display = 'none';
 	document.getElementById('primary').style.opacity = 'inherit';

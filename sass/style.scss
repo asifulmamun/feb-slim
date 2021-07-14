@@ -50,6 +50,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 --------------------------------------------------------------*/
 
+// Import Bootstrap
+@import './lib/bootstrap';
+
 // Import variables and mixins.
 @import "abstracts/abstracts";
 

@@ -1,0 +1,14 @@
+// small and extra small
+@media screen and (max-width:767px) {
+    nav.navbar{
+        .navbar-collapse{
+            ul{
+                align-content: flex-start;
+
+                li{
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
