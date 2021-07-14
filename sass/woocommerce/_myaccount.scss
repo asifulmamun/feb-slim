@@ -39,3 +39,18 @@ nav.woocommerce-MyAccount-navigation{
         padding-top: 1rem;
     }
 }
+
+// Login form
+.woocommerce-form-login{
+    p{
+        flex-direction: column;
+
+        input[type=text]{
+            width: fit-content;
+        }
+
+        button{
+            width: fit-content;
+        }
+    }
+}

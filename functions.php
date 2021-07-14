@@ -122,6 +122,8 @@ add_action( 'after_setup_theme', 'feb_slim_content_width', 0 );
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 function feb_slim_widgets_init() {
+
+	// sidebar widget
 	register_sidebar(
 		array(
 			'name'          => esc_html__( 'Sidebar', 'feb-slim' ),
@@ -133,15 +135,48 @@ function feb_slim_widgets_init() {
 			'after_title'   => '</h2>',
 		)
 	);
+
+	// footer widget one
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer First Column', 'feb-slim' ),
+			'id'            => 'footer-1',
+			'description'   => esc_html__( 'Footer First Column.', 'feb-slim' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+
+	// footer widget two
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer Second Column', 'feb-slim' ),
+			'id'            => 'footer-2',
+			'description'   => esc_html__( 'Footer First Column.', 'feb-slim' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+
+	// footer widget one
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer Third Column', 'feb-slim' ),
+			'id'            => 'footer-3',
+			'description'   => esc_html__( 'Footer First Column.', 'feb-slim' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+
 }
 add_action( 'widgets_init', 'feb_slim_widgets_init' );
-
-// // Footer Widget-1
-// function feb_slim_footer_widget_1() {
-
-// 	register_widget('footer_1');
-// }
-// add_action( 'widgets_init', 'feb_slim_footer_widget_1' );
 
 
 /**

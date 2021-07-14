@@ -866,4 +866,14 @@ nav.woocommerce-MyAccount-navigation ul li a {
   padding-top: 1rem;
 }
 
+.woocommerce-form-login p {
+  flex-direction: column;
+}
+.woocommerce-form-login p input[type=text] {
+  width: fit-content;
+}
+.woocommerce-form-login p button {
+  width: fit-content;
+}
+
 /*# sourceMappingURL=woocommerce.css.map */

@@ -1,3 +1,8 @@
+// global
+body{
+    margin: 0 !important;
+}
+
 // header
 .site-branding{
     text-align: center;
@@ -188,6 +193,95 @@ aside.widget-area{
                 font-size: 1.5rem;
             }
             
+        }
+    }
+}
+
+// Footer
+footer.site-footer{
+    background-color: $footer_top_bg;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    color: $color__text-main;
+
+    section{
+
+        h2.widget-title{
+            font-size: 1.25rem;
+        }
+
+        .textwidget{
+            p{
+                padding: 0;
+                margin: 0;
+            }
+        }
+
+        ul{
+            margin: 0;
+            padding: 0;
+
+            li{
+
+                list-style: none;
+
+                a{
+                    color: $color__text-main;
+                }
+            }
+        }
+    }
+}
+
+#footer_bottom{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-top: .063rem solid $border_light_color;
+
+    .payment_card{
+        display: flex;
+
+        span.card{
+            padding: .5rem;
+            font-size: 1.75rem;
+            border: none;
+        }
+    }
+
+
+    ul.footer_social{
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: flex-end;
+
+        li{
+            list-style: none;
+
+            a{
+                font-size: 1.75rem;
+                color: $color__text-main;
+                padding: .5rem;
+
+                &:hover{
+                    color: $color__link;
+                }
+            }
+        }
+    }
+
+    .site-info{
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        font-size: .75rem;
+        color: $color__text-main;
+
+        a{
+            color: $color__text-main;
+
+            &:hover{
+                color: $color__link;
+            }
         }
     }
 }

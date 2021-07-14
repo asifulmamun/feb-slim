@@ -935,6 +935,10 @@ a:hover {
 
 /* Customizer
 ---------------------------------------- */
+body {
+  margin: 0 !important;
+}
+
 .site-branding {
   text-align: center;
   line-height: 0.6rem;
@@ -1100,6 +1104,73 @@ aside.widget-area ul li {
   -ms-transform: translate(0%, -50%);
   -o-transform: translate(0%, -50%);
   font-size: 1.5rem;
+}
+
+footer.site-footer {
+  background-color: #f6f6f6;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  color: #404040;
+}
+footer.site-footer section h2.widget-title {
+  font-size: 1.25rem;
+}
+footer.site-footer section .textwidget p {
+  padding: 0;
+  margin: 0;
+}
+footer.site-footer section ul {
+  margin: 0;
+  padding: 0;
+}
+footer.site-footer section ul li {
+  list-style: none;
+}
+footer.site-footer section ul li a {
+  color: #404040;
+}
+
+#footer_bottom {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-top: 0.063rem solid #ddd;
+}
+#footer_bottom .payment_card {
+  display: flex;
+}
+#footer_bottom .payment_card span.card {
+  padding: 0.5rem;
+  font-size: 1.75rem;
+  border: none;
+}
+#footer_bottom ul.footer_social {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+#footer_bottom ul.footer_social li {
+  list-style: none;
+}
+#footer_bottom ul.footer_social li a {
+  font-size: 1.75rem;
+  color: #404040;
+  padding: 0.5rem;
+}
+#footer_bottom ul.footer_social li a:hover {
+  color: #4169e1;
+}
+#footer_bottom .site-info {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  font-size: 0.75rem;
+  color: #404040;
+}
+#footer_bottom .site-info a {
+  color: #404040;
+}
+#footer_bottom .site-info a:hover {
+  color: #4169e1;
 }
 
 /*# sourceMappingURL=style.css.map */
