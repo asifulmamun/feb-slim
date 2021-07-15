@@ -58,7 +58,8 @@
 				<div class="site-info text-right">
 					<?php
 						/* translators: 1: Theme name, 2: Theme author. */
-						printf(esc_html__('%1$s by %2$s.', 'feb-slim'), 'feb-slim', '<a href="https://asifulmamun.info">asifulmamun</a>');
+						printf(esc_html__('%1$s by %2$s.', 'feb-slim'), '&copy;&nbsp;2021,&nbsp;Smafolk.is ', '<a target="_blank" title="Click here to for fownload this theme free" href="https://github.com/asifulmamun/feb-slim">FEB Slim Theme</a>');
+						echo '<br><small>FEB Slim theme by <a target="_blank" title="Contact with developer: Al Mamun - asifulmamun" href="https://asifulmamun.info">asifulmamun</a><smal>';
 					?>
 				</div>
 			</div>
