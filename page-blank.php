@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template Name: Defaule Page - Blank
+ * Template Name: Default Page - Blank
  *
  * @package WordPress
  * @subpackage feb-slim
