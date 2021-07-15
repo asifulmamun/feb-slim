@@ -15,8 +15,6 @@ get_header();
 	<div class="row">
 		<div class="col">
 
-
-
 			<main id="primary" class="site-main">
 
 				<?php
