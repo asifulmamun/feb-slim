@@ -119,4 +119,7 @@
 		</div>
 	</nav>
 
+	<!--custom  notice -->
+	<div class="custom_notice" style="width:100%;overflow:hidden;display:flex;text-align:center;background-color:yellow;min-height:40px;justify-content:center;padding-top:1rem;padding-bottom:1rem;font-size:2rem;font-weight:bold;color:black;"><span>Vefsíðan er í vinnslu.</span></div>
+	
 	</header><!-- #masthead -->
