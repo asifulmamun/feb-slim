@@ -36,6 +36,10 @@ form.cart{
             @extend %button_reverse;
             margin: 0 0 0 1rem;
             padding: .4375rem .75rem;
+            
+            @media screen and (max-width:767px){
+                margin: .8rem 0 0 .2rem;
+            }
         }
     }
 
