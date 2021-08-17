@@ -3,6 +3,7 @@
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     color: $color__background-body;
+    margin-bottom: 1rem;
 
     a{
         @extend %button_simple;
@@ -146,6 +147,22 @@ form.checkout{
 
         li{
             list-style: none;
+        }
+    }
+}
+
+/* Notice group
+----------- */
+.woocommerce-NoticeGroup-checkout{
+    ul.woocommerce-error{
+        margin-left: .5rem;
+        margin-right: .5rem;
+        margin-top: .5rem;
+
+        li{
+            list-style: none;
+            padding: 1rem .5rem;
+            color: $color__background-body;
         }
     }
 }
