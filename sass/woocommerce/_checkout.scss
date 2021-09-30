@@ -153,14 +153,14 @@ form.checkout{
 
 /* Notice group
 ----------- */
-    ul.woocommerce-error{
-        margin-left: .5rem;
-        margin-right: .5rem;
-        margin-top: .5rem;
+ul.woocommerce-error{
+    margin-left: .5rem;
+    margin-right: .5rem;
+    margin-top: .5rem;
 
-        li{
-            list-style: none;
-            padding: 1rem .5rem;
-            color: $color__background-body;
-        }
+    li{
+        list-style: none;
+        padding: 1rem .5rem;
+        color: $color__background-body;
     }
+}
